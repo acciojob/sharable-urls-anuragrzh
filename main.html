@@ -2,7 +2,7 @@
 <html>
   <body>
    <h3 id="url">https://localhost:8080/</h3>
-		 <form id="infoForm">
+		 <!-- <form id="infoForm"> -->
     <label for="name">Name: </label>
     <input type="text" id="name" name="name" /><br><br>
 
@@ -10,7 +10,7 @@
     <input type="number" id="year" name="year"><br><br>
 
     <button  id="button">Submit</button>
-  </form>
+  <!-- </form> -->
 
 	  
   
@@ -34,8 +34,11 @@
 		if(name) params.push(`name=${encodeURIComponent(name)}`);
 		if(year) params.push(`year=${encodeURIComponent(year)}`);
 
+// console.log(params.length > 0);
+
       const fullURL = params.length > 0 ? `https://localhost:8080/?${params.join("&")}` : "https://localhost:8080/";
-		document.getElementById('url').textContent = fullURL;
+		// console.log(fullURL)
+document.getElementById('url').textContent = fullURL;
     });
 
  </script>
