@@ -2,46 +2,19 @@
 <html>
   <body>
    <h3 id="url">https://localhost:8080/</h3>
-		 <!-- <form id="infoForm"> -->
+		 <form id="infoForm">
     <label for="name">Name: </label>
-    <input type="text" id="name" name="name" /><br><br>
+    <input type="text" id="name" name="name"><br><br>
 
     <label for="year">Year:</label>
     <input type="number" id="year" name="year"><br><br>
 
-    <button  id="button">Submit</button>
-  <!-- </form> -->
+    <button type="submit" id="button">Submit</button>
+  </form>
 
 	  
   
- <script >
-
-	 // // your code here
-//  const form = document.getElementById('infoForm');
-    // const urlDisplay = document.getElementById('url');
-// const baseURL = "https://localhost:8080/";
-
-	 // console.log(urlDisplay)
-
-    document.getElementById("button").addEventListener('click', function() {
-      // event.preventDefault(); // Prevent actual form submission
-// console.log("form event")
-		const params = [];
-
-      const name = document.getElementById('name').value;
-      const year = document.getElementById('year').value;
-
-		if(name) params.push(`name=${encodeURIComponent(name)}`);
-		if(year) params.push(`year=${encodeURIComponent(year)}`);
-
-// console.log(params.length > 0);
-
-      const fullURL = params.length > 0 ? `https://localhost:8080/?${params.join("&")}` : "https://localhost:8080/";
-		// console.log(fullURL)
-document.getElementById('url').textContent = fullURL;
-    });
-
- </script>
+ <script type="text/javascript" src="./script.js"></script>
   
   </body>
 
